@@ -1,6 +1,6 @@
 # AI Assistant with Weather Tools
 
-AI Assistant berbasis LangChain yang dapat memberikan informasi cuaca dengan memory persisten menggunakan Neo4j. Assistant ini menggunakan ReAct (Reasoning and Acting) pattern untuk menjalankan tools dan menyimpan riwayat percakapan.
+AI Assistant berbasis LangChain yang dapat memberikan informasi cuaca (api openweather) dengan memory persisten menggunakan Neo4j. Assistant ini menggunakan ReAct (Reasoning and Acting) pattern untuk menjalankan tools dan menyimpan riwayat percakapan dan menggunakan model LLM local llama3.
 
 ## 📋 Fitur
 
@@ -391,9 +391,6 @@ Health check endpoint
 4. Push branch: `git push origin feature/new-feature`
 5. Submit Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🆘 Support
 
@@ -408,15 +405,3 @@ Jika mengalami masalah:
    - Environment information
    - Log output
 
-## 🔮 Roadmap
-
-- [ ] Add more weather data sources
-- [ ] Implement user authentication
-- [ ] Add conversation threading
-- [ ] Web UI interface
-- [ ] Docker compose setup
-- [ ] Kubernetes deployment
-- [ ] Monitoring dan metrics
-- [ ] Rate limiting
-- [ ] API key management
-- [ ] Multi-language support
