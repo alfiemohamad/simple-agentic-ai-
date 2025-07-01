@@ -61,18 +61,30 @@ pip install -r requirements.txt
 ### 2. Setup Neo4j Database
 
 #### Option A: Docker (Recommended)
+
+docker compese.yml
+```yaml
+version: '3.8'
+services:
+  neo4j:
+    image: neo4j:ubi9
+    container_name: neo4j
+    ports:
+      - "7474:7474"  # HTTP
+      - "7687:7687"  # Bolt
+    volumes:
+      - ./data:/data
+      - ./logs:/logs
+      - ./import:/var/lib/neo4j/import
+      - ./plugins:/plugins
+    environment:
+      - NEO4J_AUTH=neo4j/warwerwor
+      - NEO4J_PLUGINS=["apoc"]
+    restart: unless-stopped
+
 ```bash
-docker run \
-    --name neo4j \
-    -p 7474:7474 -p 7687:7687 \
-    -d \
-    -v neo4j_data:/data \
-    -v neo4j_logs:/logs \
-    -v neo4j_import:/var/lib/neo4j/import \
-    -v neo4j_plugins:/plugins \
-    --env NEO4J_AUTH=neo4j/password \
-    neo4j:latest
-```
+# Start Neo4j container
+docker-compose up -d
 
 #### Option B: Neo4j Desktop
 1. Download dari [Neo4j Desktop](https://neo4j.com/download/)
