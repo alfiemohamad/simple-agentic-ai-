@@ -1,0 +1,7 @@
+*.env
+*.log
+*.pyc
+*json
+__pycache__/
+app.key
+*.ipynb

@@ -1,0 +1,9 @@
+asyncio
+fastapi
+uvicorn
+langchain
+langchain_community
+angchain-google-vertexai
+neo4j
+python-dotenv
+aiohttp
