@@ -17,6 +17,7 @@ class Query(BaseModel):
 async def chat(query: Query) -> Dict[str, Any]:
     try:
         # Process the query
+        print(f"Received query: {query.text}")
         result = await agent.ainvoke(query.text)
         
         if "error" in result:
